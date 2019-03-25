@@ -1,20 +1,12 @@
 def play_game():
+    player1Selection = input(
+        "Player 1, Please type Paper, Rock or Scissors:  ").capitalize()
+    player2Selection = input(
+        "Player 1, Please type Paper, Rock or Scissors:  ").capitalize()
+
     try:
-        player1Selection = int(input("Player 1, Please select one of the following:\n1.) Paper\n2.) Rock\n3.) Scissors\n\n(Enter 1, 2 or 3): "))
-    except ValueError:
-        print("You must inter an interger (1 - 3)")
-        return 1
-    try:
-        player2Selection = int(input("Player 2, Please select one of the following:\n1.) Paper\n2.) Rock\n3.) Scissors\n\n(Enter 1, 2 or 3): "))
-    except ValueError:
-        print("Value Error Eric")
-        return 1
-    
-    if player1Selection in range(1,4) and player2Selection in range(1,4):
-        pass
-    else:
-        print("must be 1 2 or 3")
-        return 1
+        type(player1Selection) and type(player2Selection) == str
+
 
     if player1Selection == 1 and player2Selection == 2:
         print("Paper beats Rock! Player 1 wins!")
